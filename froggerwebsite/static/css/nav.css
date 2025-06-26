@@ -1,0 +1,52 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0.5rem 10rem;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .logo {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #18230F;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login {
+  background: #5A827E75;
+}
+
+.download {
+  background: #5A827E;
+}
+
+@media (max-width: 800px) {
+  nav {
+    margin: 0.5rem 1rem;
+  }
+}

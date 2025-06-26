@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frogger Website</title>
+    <link rel="icon" href="static/img/logo.png">
+    <link rel="stylesheet" href="static/css/login.css">
+    <script defer src="static/js/login.js"></script>
+  </head>
+  
+  <body>
+    <img class="bg" src="static/img/bg1.webp" alt="background" draggable=False>
+    
+    <div id="login">
+      <h1>Login</h1>
+      <p>Wir haben dich schon vermisst!</p>
+      <form id="login-form" action="/api/v0/user/login" method="POST">
+        <div>
+          <b>Username</b>
+          <input type="text" name="username" required>
+        </div>
+        <div>
+          <b>Password</b>
+          <input type="password" name="password" required>
+        </div>
+        <button disabled>Login</button>
+      </form>
+      <p class="switch">Kein Account? <a href="/register">Registrieren!</a></p>
+    </div>
+    
+    <div id="register">
+      <h1>Register</h1>
+      <p>Willkommen neue/r, erstelle hier einen account!</p>
+      <form id="register-form" action="/api/v0/user/register" method="POST">
+        <div>
+          <b>Username</b>
+          <input type="text" name="username" required>
+        </div>
+        <div>
+          <b>Password</b>
+          <input type="password" name="password" required>
+        </div>
+        <button disabled>Login</button>
+      </form>
+      <p class="switch">Schon einen Account? <a href="/login">Log in!</a></p>
+    </div>
+  </body>
+</html>

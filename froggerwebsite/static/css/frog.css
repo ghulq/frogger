@@ -1,0 +1,39 @@
+.frog1 {
+  position: absolute;
+  top: 8rem;
+  left: 13rem;
+  animation: idle 4s infinite;
+  animation-timing-function: linear;
+  transition: 0.2s;
+}
+
+.frog1:hover {
+  transform: scale(1.01);
+}
+
+@keyframes idle {
+  0% {
+    transform: translateY(0);
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 5deg;
+  }
+  50% {
+    transform: translateY(1rem);
+    rotate: 0deg;
+  }
+  75% {
+    rotate: -5deg;
+  }
+  100% {
+    transform: translateY(0);
+    rotate: 0deg;
+  }
+}
+
+@media (max-width: 800px) {
+  .frog1 {
+    display: none;
+  }
+}

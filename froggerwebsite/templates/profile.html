@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frogger Website</title>
+    <link rel="icon" href="static/img/logo.png">
+    <link rel="stylesheet" href="static/css/profile.css">
+  </head>
+  <body>
+    <div id="profile">
+      <div class="hero">
+        <img src="static/img/logo.png" alt="profile picture" draggable=False">
+        <h1>{{ user }}</h1>
+      </div>
+      <hr>
+      <div class="grid">
+        <div>
+          <p>Spiele Gespielt</p>
+          <b>{{ userc[3] }}</b>
+        </div>
+        <div>
+          <p>Bester Score</p>
+          <b>{{ userc[4] }}</b>
+        </div>
+        <div>
+          <p>Letzter Score</p>
+          <b>{{ userc[5] }}</b>
+        </div>
+        <div>
+          <p>Zuletzt Gespielt</p>
+          <b>{{ userc[6] }}</b>
+        </div>
+        <div>
+          <p>Account Erstellt</p>
+          <b>{{ userc[7] }}</b>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+#5A827E - darkest
+#84AE92
+#B9D4AA
+#FAFFCA - lightest

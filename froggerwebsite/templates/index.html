@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frogger Website</title>
+    <link rel="icon" href="static/img/logo.png">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/nav.css">
+    <link rel="stylesheet" href="static/css/frog.css">
+    <script src="static/js/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img class="logo" onclick="" src="static/img/logo.png" alt="logo" draggable=False>
+        <a href=""></a>
+      </div>
+      <div>
+        {% if username %}
+          <a class="login" href="/logout">Logout</a>
+        {% else %}
+          <a class="login" href="/login">Login</a>
+        {% endif %}
+        <a class="download" href="/download">Download</a>
+      </div>
+    </nav>
+
+    <img class="frog1" src="static/img/icons/frog.svg" draggable=False>
+    
+    <div class="container">
+      <div class="hero">
+        <h1>Frogger</h1>
+        <p>Das klassische Frogger Spiel reworked!</p>
+        <div>
+          <a class="download" href="/download">Download</a>
+          <a id="more">Mehr</a>
+        </div>
+      </div>
+
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        {% if leaderboard %}
+          {% for l in leaderboard %}
+            <a href="/@{{ l[0] }}">
+              <p>{{ l[0] }}</p>
+              <p>{{ l[1] }}</p>
+            </a>
+          {% endfor %}
+        {% else %}
+          <p>No leaderboard available</p>
+        {% endif %}
+      </div>
+
+      <div class="more">
+        <h2>Informationen</h2>
+        <p>Lade das Spiel über den Knopf oben rechts in der Ecke mit der aufschrift "Download" oder <a href="/download">hier</a> herunter und starte das Spiel. Um alle funktionen zu nutzen wie das speichern von spieldaten wird ein account benötigt, jedoch kannst du das Spiel auch ganz normal ohne account spielen. Erstelle einen account <a href="/register">hier</a>. Bei jedem Spielmeustart wirst duneu aufgefordert dich anzumelden. Der Spielcode ist <a href="https://github.com/ghulq/frogger/tree/main" target="_blank">hier</a> anzusehen und der code für die Website <a href="https://github.com/ghulq/frogger/tree/website" target="_blank">hier</a>. Und jetzt viel Spaß! :D</p>
+      </div>
+    </div>
+  </body>
+</html>
